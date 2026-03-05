@@ -1,0 +1,47 @@
+# Core LangChain packages
+langchain
+langchain-classic
+langchain-core
+langchain-community
+
+# LLM Provider - Groq
+langchain-groq
+
+# Embedding Models
+langchain-huggingface
+langchain-ollama
+
+# Vector Store
+faiss-cpu
+# faiss-gpu  # Uncomment if you have CUDA GPU
+
+# Document Loaders
+pymupdf
+unstructured
+langchain-excel-loader
+python-pptx
+chardet  # For automatic encoding detection
+
+# Additional document processing
+python-docx
+openpyxl
+pandas
+
+# ML/AI Dependencies
+torch
+sentence-transformers
+transformers
+
+# Utilities
+python-dotenv
+tqdm
+
+# Optional but recommended
+lxml
+hf_xet
+sse-starlette
+
+# webui
+streamlit
+
+
