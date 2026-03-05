@@ -1,5 +1,5 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from pdf2image import convert_from_bytes
 from langchain_ollama import ChatOllama
@@ -68,8 +68,8 @@ if uploaded_file:
     # ======================
 
     splitter = RecursiveCharacterTextSplitter(
-        chunk_size=800,
-        chunk_overlap=100
+        chunk_size=1000,
+        chunk_overlap=200
     )
 
     chunks = splitter.split_text(all_text)
@@ -108,10 +108,11 @@ if uploaded_file:
 
         context = "\n".join([doc.page_content for doc in docs])
 
-        llm = ChatOllama(model="qwen3:latest")
+        llm = ChatOllama(model="deepseek-v3.1:671b-cloud")
 
         prompt = f"""
-        Answer the question using the context below.
+        Answer the question using the context below ONLY. Do not use any other information.
+        ONLY answer based on the context. If the answer is not in the context, say "I don't know".
 
         Context:
         {context}
