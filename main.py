@@ -50,7 +50,7 @@ if uploaded_file is not None:
     if question:
 
         prompt = f"""
-        Answer the question based on the document below.
+        Answer the question based on the document below ONLY.
 
         Document:
         {all_text}
