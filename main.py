@@ -8,6 +8,9 @@ import cv2
 # Tesseract path
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
+st.title("OCR RAG Document QA")
+
+
 uploaded_file = st.file_uploader("Upload PDF", type="pdf")
 
 if uploaded_file is not None:
