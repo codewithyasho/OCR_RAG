@@ -39,4 +39,5 @@ dependencies = [
     "sse-starlette>=3.3.2",
     "rapidocr-onnxruntime>=1.4.4",
     "pdf2image>=1.17.0",
+    "opencv-python>=4.13.0.92",
 ]
